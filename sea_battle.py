@@ -57,9 +57,12 @@ class Board:
         self.live_ships = 0
 
     def print_state(self):
+        print ('  0 1 2 3 4 5')
+        print ('-------------')
         for i in range(0, self.height):
-            x = ''
+            x = str(i) + '|'
             for j in range(0, self.width):
+                x = x + ' '
                 if self.hidden and self.spaces[i][j] == '*':
                     x = x + 'o'
                 else:
